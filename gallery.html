@@ -1,0 +1,160 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Team GB</title>
+    <meta name="description" content="Team GB">
+    <meta name="Team GB" content="SitePoint">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body style="padding-top: 70px;">
+    <nav>
+        <ul style="z-index: 999;">
+
+            <li class="floatright1" style="float:right"><a class="heading2" href="#paragraph1">Shop</a></li>
+            <li class="floatright2" style="float:right"><a class="heading2" href="#home">Videos</a></li>
+            <li class="floatright3" style="float:right"><a class="heading2" href="#news">Athletes</a></li>
+            <li class="floatright4" style="float:right"><a class="heading2" href="#contact">News</a></li>
+
+            <li><a style="z-index: 999;" id="logolink" href="index.html"><img id="logo" src="images/crest.png"
+                        alt="TEAM GB LOGO"></a></li>
+            <li><a class="active heading2" href="index.html">Team GB</a></li>
+            <div id="headerbackground2"></div>
+        </ul>
+    </nav>
+
+
+    <!-- <div style="background-image: url('rowingbg.png');" class="news-image">
+        <div class="news-text">
+            <h1 style="font-size:80px; font-weight:bold; line-height: 90px;">Cracknell Wins!</h1>
+        </div>
+
+    </div> -->
+
+    <div id="paragraph1" class="row paragraph">
+        <div class="">
+            <h1 style="font-size: 60px;">Gallery.</h1>
+            <div class="row">
+                <div class="gallerycolumn">
+                    <div class="content">
+                        <img src="images/galleryimages/trainingground.jpg" onclick="openModal(1);" alt="Training ground"
+                            style="width:100%">
+                        <div class="description">
+                            <h1>A Training Ground</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallerycolumn">
+                    <div class="content">
+                        <img src="images/galleryimages/running.jpg" onclick="openModal(2);" alt="Training ground"
+                            style="width:100%">
+                        <div class="description">
+                            <h1>Athletes Running</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallerycolumn">
+                    <div class="content">
+                        <img src="images/galleryimages/kick.jpg" onclick="openModal(3);" alt="Training ground"
+                            style="width:100%">
+                        <div class="description">
+                            <h1>Football Athlete</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallerycolumn">
+                    <div class="content">
+                        <img src="images/galleryimages/goalkeeper.jpg" onclick="openModal(4);" alt="Training ground" style="width:100%">
+                        <div class="description">
+                            <h1>Training Goalkeeper</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallerycolumn">
+                    <div class="content">
+                        <img src="images/galleryimages/celebration.jpg" onclick="openModal(5);" alt="Training ground" style="width:100%">
+                        <div class="description">
+                            <h1>An Athlete Celebrates!</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <img id="modalImage" src="images/training.jpg" style="width:100%">
+            </div>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer-container">
+            <div> <img id="bluecrest" src="images/crestblue.png" alt="TEAM GB BLUE CREST">
+                <h1 class="footertext">TEAM GB</h1>
+                <h1 id="footertext2" class="footertext"><b>BELIEVE</b> EXTRAORD<b>IN</b>ARY</h1>
+            </div>
+            <div> <a style="font-size: 30px;" href="#" class="fa fa-facebook"></a>
+                <a style="font-size: 30px;" href="#" class="fa fa-twitter"></a>
+                <a style="font-size: 30px;" href="#" class="fa fa-youtube"></a>
+                <a style="font-size: 30px;" href="#" class="fa fa-instagram"></a>
+
+            </div>
+        </div>
+    </div>
+    <script> </script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () { // check if scroll event happened
+                if ($(document).scrollTop() >
+                    300) { // check if user scrolled more than 50 from top of the browser window
+                    $("#headerbackground").addClass('news-nav-coloured');
+                    console.log("1");
+                } else {
+                    $("#headerbackground").removeClass(
+                        'news-nav-coloured'); // if not, change it back to transparent
+                }
+            });
+        });
+    </script>
+    <script>
+        function openModal(n) {
+            if (n == 1) {
+                document.getElementById("modalImage").src = "images/galleryimages/trainingground.jpg";
+            }
+            else if (n == 2) {
+                document.getElementById("modalImage").src = "images/galleryimages/running.jpg";
+            }
+            else if (n == 3) {
+                document.getElementById("modalImage").src = "images/galleryimages/kick.jpg";
+            }
+            else if (n == 4) {
+                document.getElementById("modalImage").src = "images/galleryimages/goalkeeper.jpg";
+            }
+            else if (n == 5) {
+                document.getElementById("modalImage").src = "images/galleryimages/celebration.jpg";
+            }
+            document.getElementById('myModal').style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>
